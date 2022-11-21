@@ -2,7 +2,7 @@ html, body{
     margin: 0;
     width: 100%;
 }
-
+/*Homepage Background*/
 .html { 
     background: url(images/aibackground.gif) no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -11,8 +11,9 @@ html, body{
     background-size: cover;
     overflow-y: hidden;
   }
-
-   .footer{
+/*Homepage Footer 
+makes the footer stays at the bottom while centering the content in the middle using flexbox*/
+.footer{
     height: auto;
     color: white;
     position: absolute;
@@ -28,8 +29,10 @@ html, body{
     justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
+    font-size: 80%;
 }
 
+/*Button for Homepage*/
 button{
     border: #69D2e7;
     border-radius: 10px;
@@ -50,16 +53,15 @@ button:hover a{
     text-decoration: underline;
 }
 
-.footer-menu{
-    float: right;
-}
+
+/*Allows the footer to look like a row and neater. Without flex it would be all columns*/
 .footer-menu ul{
     display: flex;
 }
 .footer-menu ul li{
     padding-right: 10px;
     display: block;
-    }
+}
     
 .footer-menu ul li a{
     color: #cfd2d6;
@@ -87,10 +89,21 @@ h1{
     background-color: #69d2e7;
     width: auto;
 }
+
+/*The background images cover the entire page and will not repeat itself*/
 html{
     /*You can not scroll left and right on the website.*/
     overflow-x: hidden;
+    background:url(images/backgroundOp.png);
+    background-size:100%;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+/*Footer for effectAI and form html, sticks to the bottom even when it is scrollable*/
 .footerEffect{
     bottom: 0;
     left: 0;
@@ -103,6 +116,7 @@ html{
     justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
+    font-size: 70%;
 }
 .footerEffect, .info:after{
     height: 100px;
@@ -118,13 +132,41 @@ html{
     content: "";
     position:absolute;
     background-color: black;
-    width: 40000px;
+    width: 4000px;
     height: 150%;
     left: -1000px;
+    /*left makes the background fill up all the part of the footer. */
     z-index: -1;
 }
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
-
+/*Table css for effectAI.html*/
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid blanchedalmond;
+  }
+  
+  thead th:nth-child(1) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  th,td {
+    padding: 20px;
+  }
+  tbody td{
+    text-align: center;
+  }
 
 /*photoGallery.css*/
 .wrapper
@@ -159,6 +201,8 @@ html{
     }
 }
 
+
+/*Top menu for all html files*/
 @media screen and (max-width: 780px) {
     html{
         font-size: 18px;
@@ -188,6 +232,7 @@ html{
         cursor: pointer;
     }
 
+    /*Position of the menu*/
     .navbar .hamburger{
         position: absolute;
         top: 145px;
@@ -213,6 +258,7 @@ html{
         background: #69d2e7;
     }
 
+    /*The hamburger lines of the menu*/
     .navbar .hamburger:before { top: -10px; }
 
     .navbar .hamburger:after { bottom: -10px; }
@@ -224,11 +270,13 @@ html{
         border-radius: 0;
     }
 
+    /*Just makes the menu change into an X after you click on it.*/
     .navbar input:checked + .menu .hamburger {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 
+    /*top:0 makes it stay at top*/
     .navbar input:checked + .menu .hamburger:before {
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
@@ -242,6 +290,7 @@ html{
     }
     .navbar input:checked + .menu + ul{opacity: 1;}
 
+    /*z index makes it appear on top of other content. the transform translate just ensure the lists are in the middle*/
     .navbar ul {
         z-index: 200;
         position: absolute;
@@ -278,6 +327,7 @@ html{
     }
 }
 
+/*Top menu for navigation once view port is 780px*/
 @media screen and (min-width: 780px){
     input{
         visibility: hidden;
