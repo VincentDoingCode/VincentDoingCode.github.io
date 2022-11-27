@@ -1,6 +1,6 @@
 
 html{
-    background:url(images/backgroundOp.png);
+    background:url(images/DarkBubble.png);
 }
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -9,23 +9,23 @@ html, body{
     margin: 0;
     width: 100%;
 }
-/*Outlook of the form*/
+/*Outlook of the form */ 
 input[type=text], input[type=email], select, textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   resize: vertical;
 }
 
 /*The look of the submit button*/
 input[type=submit] {
-  background-color: #046daa;
+  background-color: #1f7275;
   color: white;
-  padding: 12px 20px;
+  padding: 10px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -35,10 +35,15 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-
+textarea{
+    height: 100px;
+}
+.all{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #f1f1f0;
   padding: 20px;
 }
 .footer{
@@ -71,6 +76,10 @@ input[type=submit]:hover {
     text-decoration: none;
 }
 
+h3{
+    color: white;
+    font-size: 25px;
+}
 @media screen and (min-width: 780px){
     .navbar{
         margin: auto;
@@ -86,9 +95,10 @@ input[type=submit]:hover {
         list-style: none;
         display: inline-block;
         position: relative;
-        margin: 0 40px;
+        margin: 0 30px;
         padding: 20px;
         text-transform: uppercase;
+        font-size: 150%;
     }
 
     .navbar ul li a{
